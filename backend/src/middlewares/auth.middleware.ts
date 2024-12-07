@@ -15,15 +15,3 @@ export const authenticate = (req: Request, res: Response, next: NextFunction) =>
 
   next()
 }
-
-export const restrictTo = (...roles: string[]) => {
-  return (req: Request, res: Response, next: NextFunction) => {
-    roles.forEach((role) => {
-      if (req.auth && !req.auth.has({ permission: `org:${role}` })) {
-        next(new ApiError(403, 'You do not have permission to access this resource'))
-      }
-    })
-
-    next()
-  }
-}
