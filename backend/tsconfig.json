@@ -10,9 +10,9 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
   },
   "files": [
-    "src/type.d.ts"
+    "api/type.d.ts"
   ], // Các file dùng để defined global type cho dự án
   "include": [
-    "src/**/*"
+    "api/**/*"
   ] // Đường dẫn include cho các file cần build
 }
