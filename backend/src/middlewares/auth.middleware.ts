@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
-import ApiError from '../utils/ApiError'
 import { AuthObject } from '@clerk/express'
+import ApiError from '../utils/ApiError'
 
 declare module 'express' {
   interface Request {
