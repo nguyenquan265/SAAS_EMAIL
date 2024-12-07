@@ -21,7 +21,7 @@ app.get('/health', (req: Request, res: Response) => {
   res.status(200).send({ message: 'Server is running' })
 })
 app.use('/api/v1', router)
-app.use('/*', (req: Request, res: Response, next: NextFunction) => {
+app.use('*', (req: Request, res: Response, next: NextFunction) => {
   next(new ApiError(404, `Can't find ${req.originalUrl} on this server!`))
 })
 
